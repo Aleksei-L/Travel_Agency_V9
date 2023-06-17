@@ -565,130 +565,41 @@ namespace TravelAgencyV9 {
 
 		}
 
-
-		/*Table* t;
-		TextBox^* m;
-		int	_foundNext, flag, SelectIndex;
-		char* FileName;*/
-	public: Table* t, * rezQuery;
-	private: T* cur;
-	private: int _foundNext, count, SelectIndex;
-	private: T _current, _found;
-	private: System::EventHandler^ h;
-	private:
-		/*int TextBoxOutput(T r) {
-			textBox1->Text = gcnew String(r->name);
-			textBox2->Text = gcnew String(r->city);
-			textBox3->Text = r->price.ToString();
-			textBox4->Text = r->number.ToString();
-			DateTime data = DateTime(r->year, r->month, r->day);
-			textBox11->Text = data.ToString();
-			return 0;
-		}*/
-		/*int TextBoxInput(T r) {
-			if (!String::Equals(textBox1->Text, String::Empty))
-				MyConvert::ToArrayASCII(r->autor, 10, textBox1->Text);
-			if (!String::Equals(textBox2->Text, String::Empty))
-				MyConvert::ToArrayASCII(r->title, 20, textBox2->Text);
-			if (!String::Equals(textBox3->Text, String::Empty)) {
-				for (int i = 0; i < textBox3->Text->Length; i++)
-					if (!Char::IsDigit(textBox3->Text->Chars[i]) && textBox3->Text->Chars[i] != '-' && textBox3->Text->Chars[i] != '+') {
-						MessageBox::Show("TextBoxInput: Поле price должно быть числовым");
-						return 0;
-					}
-				r->price = Convert::ToInt32(textBox3->Text);
-			}
-			if (!String::Equals(textBox4->Text, String::Empty)) {
-				for (int i = 0; i < textBox3->Text->Length; i++)
-					if (!Char::IsDigit(textBox3->Text->Chars[i])
-						&& textBox3->Text->Chars[i] != '-' && textBox3->Text->Chars[i] != '+')
-					{
-						MessageBox::Show("TextBoxInput: Поле number должно быть числовым");
-						return 0;
-					}
-				r->number = Convert::ToInt64(textBox4->Text);
-			}
-			if (!String::Equals(textBox11->Text, String::Empty)) {
-				DateTime data = Convert::ToDateTime(textBox11->Text);
-				r->day = data.Day;
-				r->month = data.Month;
-				r->year = data.Year;
-			}
-			return r->validate();
-		}*/
-		/*int ListViewOutput(Table* t)
-		{
-			listView1->Items->Clear(); count = 0;
-			T* i;
-			for (i = t->begin(); i < t->end(); i++)
-			{
-				ListViewOutput(*i); count++;
-			}
-			return 0;
-		}*/
-		/*int ListViewOutput(T r)
-		{
-			String* s[] = new String * [13];
-			s[0] = count.ToString();
-			s[1] = new String(r->autor);
-			s[2] = new String(r->title);
-			s[3] = r->price.ToString();
-			s[4] = r->number.ToString();
-			s[10] = r->day.ToString();
-			s[11] = r->month.ToString();
-			s[12] = r->year.ToString();
-			listView1->Items->Add(new ListViewItem(s));
-			return count;
-		}*/
-
-
 #pragma endregion
 
-		/*array<TextBox^>^ m;
+		array<TextBox^>^ m;
 		int _foundNext;
 		int flag;
 
-		T _current, _found;*/
-
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		/*_foundNext = -1;
+		_foundNext = -1;
 		flag = 0;
-		m = gcnew array<TextBox^>(5);
+		m = gcnew array<TextBox^>(7);
 		m[0] = textBox1;
 		m[1] = textBox2;
 		m[2] = textBox3;
 		m[3] = textBox4;
 		m[4] = textBox5;
-
-		t = 0; _current = 0; _found = 0;
-		t = init(t, 100);
-		_current = init(_current);     _found = init(_found);
-		_foundNext = -1; flag = 0;
-		m = new TextBox * [7];
-		m[0] = textBox1; m[1] = textBox2; m[2] = textBox4; m[3] = textBox3;
-		m[4] = textBox11; m[5] = textBox9; m[6] = textBox10;*/
-
-		t = new Table;
-		_current = new Client;
-		_found = new Client;
+		m[5] = textBox6;
+		m[6] = textBox7;
 	}
 
 	private: System::Void Add_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*array<String^ >^ ms = gcnew array< System::String^ >(5);
-		MyConvert::copyto(ms, m, 5);
+		array<String^ >^ ms = gcnew array< System::String^ >(7);
+		MyConvert::copyto(ms, m, 7);
 		ListViewItem^ listViewItem0 = gcnew ListViewItem(ms);
-		listView1->Items->Add(listViewItem0);*/
+		listView1->Items->Add(listViewItem0);
 	}
 
 	private: System::Void Delete_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*for (int i = listView1->SelectedIndices->Count - 1; i >= 0; i--) {
+		for (int i = listView1->SelectedIndices->Count - 1; i >= 0; i--) {
 			int d = listView1->SelectedIndices[i];
 			listView1->Items->RemoveAt(d);
-		}*/
+		}
 	}
 
 	private: System::Void Search_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*int ind;
+		int ind;
 		for (ind = 0; ind < listView1->Items->Count; ind++) {
 			String^ s1 = listView1->Items[ind]->SubItems[0]->Text;
 			String^ s2 = m[0]->Text;
@@ -699,41 +610,42 @@ namespace TravelAgencyV9 {
 			}
 		}
 		MessageBox::Show("No Found", "Find");
-		_foundNext = -1;*/
+		_foundNext = -1;
 	}
 
 	private: System::Void SearchNext_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*if (_foundNext == -1)
-			return; int ind;
+		if (_foundNext == -1)
+			return;
+		int ind;
 		for (ind = _foundNext + 1; ind < listView1->Items->Count; ind++) {
 			String^ s1 = listView1->Items[ind]->SubItems[0]->Text;
 			String^ s2 = m[0]->Text;
 			if (String::Equals(s1, s2)) {
-				_foundNext = ind; MessageBox::Show(ind.ToString(), "Find Index");
+				_foundNext = ind;
+				MessageBox::Show(ind.ToString(), "Find Index");
 				return;
 			}
 		}
 		MessageBox::Show("No Found", "Find");
-		_foundNext = -1;*/
+		_foundNext = -1;
 	}
 
 	private: System::Void Replace_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*if (flag == 0) {
+		if (flag == 0) {
 			flag = 1;
-			MessageBox::Show("Введите данные для замены и нажмите кнопку \"Заменить\" еще раз", "Поиск");
+			MessageBox::Show("Введите данные для замены и нажмите кнопку Заменить еще раз", "Поиск");
 			return;
 		}
 		flag = 0;
 		int ind = listView1->SelectedIndices->Count - 1;
 		if (ind != -1) {
 			ListViewItem^ listViewItem0 = listView1->SelectedItems[ind];
-			MyConvert::copyto(listViewItem0, m, 5);
-		}*/
+			MyConvert::copyto(listViewItem0, m, 7);
+		}
 	}
 
 	private: System::Void Clear_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*MyConvert::copyto(m, "", 5);
-		listView1->Items->Clear();*/
+		MyConvert::copyto(m, "", 7);
 	}
 
 

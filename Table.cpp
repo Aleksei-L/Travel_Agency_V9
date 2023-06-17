@@ -148,12 +148,6 @@ int Table::remove(const T& badClient) {
 	return n;
 }
 
-
-
-
-
-
-
 // Перегрузка операторов
 
 // Оператор вывода

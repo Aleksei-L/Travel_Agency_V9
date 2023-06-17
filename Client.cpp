@@ -83,37 +83,6 @@ Client* Client::copy() {
 	return new Client(*this);
 }
 
-
-//int  Record::validate() {
-//	char c;
-//	for (int i = 0; title[i] != '\0'; i++) {
-//		c = tolower(title[i]);
-//		if (!('а' <= c && c <= 'я'))
-//		{
-//			MessageBox::Show("validate: название состоит из русских букв");
-//			return 0;
-//		}
-//	}
-//	for (int i = 0; autor[i] != '\0'; i++)
-//		if (!('а' <= tolower(autor[i]) && tolower(autor[i]) <= 'я'))
-//		{
-//			MessageBox::Show("validate: имя состоит из русских букв");
-//			return 0;
-//		}
-//	if (price < 0) {
-//		MessageBox::Show("validate: цена - отрицательное число");
-//		return 0;
-//	}
-//	if (number < 0) {
-//		MessageBox::Show("validate: номер - отрицательное число");
-//		return 0;
-//	}
-//	return 1;
-//}
-
-
-
-
 // Перегрузка операторов
 
 // Оператор проверки на равенство

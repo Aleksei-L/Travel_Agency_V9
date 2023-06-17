@@ -5,9 +5,11 @@ using namespace cli;
 
 class MyConvert {
 public:
-	MyConvert(void);
-	~MyConvert(void);
-	static void ToArray(wchar_t* m, int size, String^ s);
-	static void ToArrayASCII(char* m, int size, String^ s);
-	static char* ToStringASCII(String^ S);
+	MyConvert();
+	~MyConvert();
+	static void copyto(ListViewItem^, array<TextBox^>^, int);
+	static void copyto(array<TextBox^>^, ListViewItem^, int);
+	static void copyto(array<TextBox^>^, array<String^ >^, int);
+	static void copyto(array<TextBox^>^, String^, int);
+	static void copyto(array<String^ >^, array<TextBox^>^, int);
 };

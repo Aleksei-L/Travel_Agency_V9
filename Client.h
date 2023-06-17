@@ -3,17 +3,6 @@
 #include "MyString.h"
 #include "MyDate.h"
 
-//class Record {
-//public:
-//	char autor[10];
-//	char title[20];
-//	long number;
-//	int price;
-//	int day, month, year;
-//	Record();
-//	int validate();
-//};
-
 class Client {
 private:
 	MyString name; // Имя клиента
@@ -32,9 +21,6 @@ public:
 	int cmp(const Client& t) const;
 	int equal(const Client& t) const;
 	Client* copy();
-
-	
-
 	// Перегрузка операторов
 	friend int operator == (const Client&, const Client&);
 	friend int operator != (const Client&, const Client&);
