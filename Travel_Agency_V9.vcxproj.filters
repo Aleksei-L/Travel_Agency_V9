@@ -24,9 +24,6 @@
     <ClCompile Include="Client.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="MyDate.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>

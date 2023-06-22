@@ -121,7 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp" />
-    <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="MyConvert.cpp" />
     <ClCompile Include="MyDate.cpp" />

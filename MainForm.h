@@ -1,10 +1,6 @@
 #pragma once
 #include "MyConvert.h"
-#include "Client.h"
 #include "Table.h"
-#include "MyString.h"
-#include "Vector.h"
-#include "MyDate.h"
 
 namespace TravelAgencyV9 {
 
@@ -61,29 +57,29 @@ namespace TravelAgencyV9 {
 	private: System::Windows::Forms::ColumnHeader^ columnHeader5;
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
-	private: System::Windows::Forms::GroupBox^ groupBox3;
-	private: System::Windows::Forms::Button^ button6;
-	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::GroupBox^ groupBox2;
-	private: System::Windows::Forms::TextBox^ textBox7;
-	private: System::Windows::Forms::TextBox^ textBox6;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::GroupBox^ groupBox3;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::TextBox^ textBox7;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::TabControl^ tabControl1;
-
-	protected:
+	private: System::Windows::Forms::ColumnHeader^ columnHeader6;
+	private: System::Windows::Forms::ColumnHeader^ columnHeader7;
 
 	private:
 		/// <summary>
@@ -121,6 +117,8 @@ namespace TravelAgencyV9 {
 			this->columnHeader3 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->columnHeader4 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->columnHeader5 = (gcnew System::Windows::Forms::ColumnHeader());
+			this->columnHeader6 = (gcnew System::Windows::Forms::ColumnHeader());
+			this->columnHeader7 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
@@ -283,16 +281,16 @@ namespace TravelAgencyV9 {
 			// 
 			// listView1
 			// 
-			this->listView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::ColumnHeader^  >(5) {
+			this->listView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::ColumnHeader^  >(7) {
 				this->columnHeader1, this->columnHeader2,
-					this->columnHeader3, this->columnHeader4, this->columnHeader5
+					this->columnHeader3, this->columnHeader4, this->columnHeader5, this->columnHeader6, this->columnHeader7
 			});
-			this->listView1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->listView1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->listView1->GridLines = true;
 			this->listView1->HideSelection = false;
 			this->listView1->Location = System::Drawing::Point(0, 24);
 			this->listView1->Name = L"listView1";
-			this->listView1->Size = System::Drawing::Size(693, 631);
+			this->listView1->Size = System::Drawing::Size(693, 330);
 			this->listView1->TabIndex = 1;
 			this->listView1->UseCompatibleStateImageBehavior = false;
 			this->listView1->View = System::Windows::Forms::View::Details;
@@ -315,8 +313,18 @@ namespace TravelAgencyV9 {
 			// 
 			// columnHeader5
 			// 
-			this->columnHeader5->Text = L"Дата рождения";
-			this->columnHeader5->Width = 99;
+			this->columnHeader5->Text = L"День";
+			this->columnHeader5->Width = 45;
+			// 
+			// columnHeader6
+			// 
+			this->columnHeader6->Text = L"Месяц";
+			this->columnHeader6->Width = 57;
+			// 
+			// columnHeader7
+			// 
+			this->columnHeader7->Text = L"Год";
+			this->columnHeader7->Width = 50;
 			// 
 			// tabPage1
 			// 
@@ -438,23 +446,23 @@ namespace TravelAgencyV9 {
 			// 
 			// textBox7
 			// 
-			this->textBox7->Location = System::Drawing::Point(130, 191);
+			this->textBox7->Location = System::Drawing::Point(166, 193);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(39, 20);
+			this->textBox7->Size = System::Drawing::Size(50, 20);
 			this->textBox7->TabIndex = 11;
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(82, 191);
+			this->textBox6->Location = System::Drawing::Point(92, 191);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(42, 20);
+			this->textBox6->Size = System::Drawing::Size(50, 20);
 			this->textBox6->TabIndex = 10;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(23, 191);
+			this->textBox5->Location = System::Drawing::Point(16, 191);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(53, 20);
+			this->textBox5->Size = System::Drawing::Size(50, 20);
 			this->textBox5->TabIndex = 9;
 			// 
 			// textBox4
@@ -568,11 +576,11 @@ namespace TravelAgencyV9 {
 #pragma endregion
 
 		array<TextBox^>^ m;
-		int _foundNext;
+		int foundNext;
 		int flag;
 
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		_foundNext = -1;
+		foundNext = -1;
 		flag = 0;
 		m = gcnew array<TextBox^>(7);
 		m[0] = textBox1;
@@ -585,49 +593,63 @@ namespace TravelAgencyV9 {
 	}
 
 	private: System::Void Add_Click(System::Object^ sender, System::EventArgs^ e) {
-		array<String^ >^ ms = gcnew array< System::String^ >(7);
+		array <String^ >^ ms = gcnew array < System::String^ >(7);
 		MyConvert::copyto(ms, m, 7);
 		ListViewItem^ listViewItem0 = gcnew ListViewItem(ms);
 		listView1->Items->Add(listViewItem0);
 	}
 
 	private: System::Void Delete_Click(System::Object^ sender, System::EventArgs^ e) {
-		for (int i = listView1->SelectedIndices->Count - 1; i >= 0; i--) {
-			int d = listView1->SelectedIndices[i];
-			listView1->Items->RemoveAt(d);
+		for (int i = 0; i < listView1->Items->Count; i++) {
+			if (listView1->Items[i]->SubItems[0]->Text == m[0]->Text &&
+				listView1->Items[i]->SubItems[1]->Text == m[1]->Text &&
+				listView1->Items[i]->SubItems[2]->Text == m[2]->Text &&
+				listView1->Items[i]->SubItems[3]->Text == m[3]->Text &&
+				listView1->Items[i]->SubItems[4]->Text == m[4]->Text &&
+				listView1->Items[i]->SubItems[5]->Text == m[5]->Text &&
+				listView1->Items[i]->SubItems[6]->Text == m[6]->Text) {
+				listView1->Items[i]->Remove();
+				i--;
+			}
 		}
 	}
 
 	private: System::Void Search_Click(System::Object^ sender, System::EventArgs^ e) {
-		int ind;
-		for (ind = 0; ind < listView1->Items->Count; ind++) {
-			String^ s1 = listView1->Items[ind]->SubItems[0]->Text;
-			String^ s2 = m[0]->Text;
-			if (String::Equals(s1, s2)) {
-				_foundNext = ind;
-				MessageBox::Show(ind.ToString(), "Find Index");
+		for (int i = 0; i < listView1->Items->Count; i++) {
+			if (listView1->Items[i]->SubItems[0]->Text == m[0]->Text &&
+				listView1->Items[i]->SubItems[1]->Text == m[1]->Text &&
+				listView1->Items[i]->SubItems[2]->Text == m[2]->Text &&
+				listView1->Items[i]->SubItems[3]->Text == m[3]->Text &&
+				listView1->Items[i]->SubItems[4]->Text == m[4]->Text &&
+				listView1->Items[i]->SubItems[5]->Text == m[5]->Text &&
+				listView1->Items[i]->SubItems[6]->Text == m[6]->Text) {
+				foundNext = i;
+				MessageBox::Show(i.ToString(), "Индекс найденного элемента");
 				return;
 			}
 		}
-		MessageBox::Show("No Found", "Find");
-		_foundNext = -1;
+		MessageBox::Show("Не найдено", "Поиск");
+		foundNext = -1;
 	}
 
 	private: System::Void SearchNext_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (_foundNext == -1)
+		if (foundNext == -1)
 			return;
-		int ind;
-		for (ind = _foundNext + 1; ind < listView1->Items->Count; ind++) {
-			String^ s1 = listView1->Items[ind]->SubItems[0]->Text;
-			String^ s2 = m[0]->Text;
-			if (String::Equals(s1, s2)) {
-				_foundNext = ind;
-				MessageBox::Show(ind.ToString(), "Find Index");
+		for (int i = foundNext + 1; i < listView1->Items->Count; i++) {
+			if (listView1->Items[i]->SubItems[0]->Text == m[0]->Text &&
+				listView1->Items[i]->SubItems[1]->Text == m[1]->Text &&
+				listView1->Items[i]->SubItems[2]->Text == m[2]->Text &&
+				listView1->Items[i]->SubItems[3]->Text == m[3]->Text &&
+				listView1->Items[i]->SubItems[4]->Text == m[4]->Text &&
+				listView1->Items[i]->SubItems[5]->Text == m[5]->Text &&
+				listView1->Items[i]->SubItems[6]->Text == m[6]->Text) {
+				foundNext = i;
+				MessageBox::Show(i.ToString(), "Индекс найденного элемента");
 				return;
 			}
 		}
-		MessageBox::Show("No Found", "Find");
-		_foundNext = -1;
+		MessageBox::Show("Не найдено", "Поиск");
+		foundNext = -1;
 	}
 
 	private: System::Void Replace_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -646,35 +668,10 @@ namespace TravelAgencyV9 {
 
 	private: System::Void Clear_Click(System::Object^ sender, System::EventArgs^ e) {
 		MyConvert::copyto(m, "", 7);
-	}
-
-
-	public: void ExeptionLetters(char* str) {
-		String^ s = gcnew String(str);
-		s = String::Concat("\nString\t", s, "\t must include English letters\n");
-		MessageBox::Show(s, "ExeptionLetters");
-	}
-
-	public: void ExeptionInt(char* str) {
-		String^ s = gcnew String(str);
-		s = String::Concat("\nString\t", s, "\t must include letters of digits\n");
-		MessageBox::Show(s, "ExeptionInt");
-	}
-
-	public: void ExeptionRange(double d, double min, double max) {
-		String^ s1 = d.ToString();
-		String^ s2 = min.ToString();
-		String^ s3 = max.ToString();
-		s1 = String::Concat("\n Value\t", s1, "\t must be latter then ", s2, "and must be greater then", s3);
-		MessageBox::Show(s1, "ExeptionRange");
-	}
-
-	public: void ExeptionFound() {
-		MessageBox::Show("Просмотр закончен. Искомый элемент не найден", "Поиск");
-	}
-
-	public: void ExeptionEmpty() {
-		MessageBox::Show("Поля ввода не должны быть пустыми", "Input");
+		for (int i = 0; i < listView1->Items->Count; i++) {
+			listView1->Items[i]->Remove();
+			i--;
+		}
 	}
 	};
 }
